@@ -66,7 +66,7 @@ export default Em.Component.extend(WithConfigMixin, StyleBindingsMixin, {
    * @property 'selected-idx'
    * @type Number
    */
-  'selected-idx': 0,
+  'selected-idx': void 0,
 
   /**
    * Select the given tab.
