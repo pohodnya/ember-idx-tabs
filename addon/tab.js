@@ -13,6 +13,8 @@ export default Em.Component.extend(WithConfigMixin, {
   setTagName: Em.on('init', function() {
     return this.set('tagName', this.get('config.tabs.tabTag') || 'div');
   }),
+  
+  idx: void 0,
 
   /**
    * Bind the specified attributes to the DOM element
@@ -72,7 +74,7 @@ export default Em.Component.extend(WithConfigMixin, {
   }),
 
   index: computed('tabList.tab_instances.[]', function() {
-    return this.get('tabList.tab_instances').indexOf(this);
+    return this.get('idx') || this.get('tabList.tab_instances').indexOf(this);
   }),
 
   /**
