@@ -99,7 +99,7 @@ export default Em.Component.extend(WithConfigMixin, {
     if ((this.get('tabs.selected') != null) === this) {
       return;
     }
-    idx = parseInt(this.get('tabs.selected-idx', 10));
+    idx = this.get('tabs.selected-idx');
     if (idx === this.get('index')) {
       return this.select();
     }
